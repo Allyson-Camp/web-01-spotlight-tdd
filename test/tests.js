@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { addExclamationPoints, myFunction, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAString, returnAsAnArray, makeLuckyGreeting, getSecondItem } from '../functions.js';
+import { addExclamationPoints, myFunction, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAString, returnAsAnArray, makeLuckyGreeting, getSecondItem, getLastItem } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -150,4 +150,43 @@ test('This function should take in two numbers and return a greeting announcing 
     expect.deepEqual(actual2, expected2);
 });
 
+test('This function should take an array and return the second item in the array', (expect) => {
+    const expected = 'apple';
 
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected);
+
+    const expected1 = 'rat';
+
+    const actual1 = getSecondItem(['cat', 'rat', 'bat', 'hat']);
+
+    expect.deepEqual(actual1, expected1);
+
+    const expected2 = 'south';
+
+    const actual2 = getSecondItem(['north', 'south', 'east', 'west']);
+
+    expect.deepEqual(actual2, expected2);
+
+});
+
+test('his function should take an array and return the LAST item in the array, no matter the arrays length', (expect) => {
+    const expected = 'plum';
+
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected);
+
+    const expected1 = 'red';
+
+    const actual1 = getLastItem(['green', 'blue', 'pink', 'red']);
+
+    expect.deepEqual(actual1, expected1);
+
+    const expected2 = 'Prada';
+
+    const actual2 = getLastItem(['Chanel', 'McQueen', 'YSL', 'Prada']);
+
+    expect.deepEqual(actual2, expected2);
+});

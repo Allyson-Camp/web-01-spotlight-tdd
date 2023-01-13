@@ -129,7 +129,7 @@ Output:
 */
 
 export function getSecondItem(array) {
-    return `${'secondItem'}`;
+    return array[1];
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
@@ -146,7 +146,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    return true;
+    return array[array.length - 1];
 }
 
 // ======================================= STRETCH GOALS ============================================
